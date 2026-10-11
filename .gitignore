@@ -1,0 +1,18 @@
+# Rust build artifacts
+target/
+**/*.rs.bk
+
+# Simulator output
+*.parquet
+events.json
+batch_events.json
+
+# Agenthon submission files (private)
+submission*.json
+submission*.zip
+team-claim.json
+
+# Local env
+.venv/
+venv/
+__pycache__/
