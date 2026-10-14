@@ -24,9 +24,6 @@ must match the reference within tight statistical tolerances:
 | Hill index | Tail heaviness | ≤ 1.5 |
 | Depth JS divergence | Order-book depth shape | ≤ 0.10 |
 
-You are optimizing a system whose correctness is defined by how
-closely its output *statistically resembles* the reference — not by
-matching it line-for-line.
 
 ---
 
