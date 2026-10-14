@@ -111,12 +111,6 @@ restores `Int64` and the arithmetic is exact.
 
 ## The result
 
-| Simulator | events/sec | Relative |
-|---|---|---|
-| ABIDES Python baseline | ~7,400 | 1× |
-| Track 3 leaderboard leader | ~220,000 | ~30× |
-| **This implementation** | **~863,500** | **~117×** |
-
 Across the 65 public scenarios the self-reported rate ranges from
 ~530,000 to ~1,340,000 events/sec, with a median near 900,000.
 
@@ -131,24 +125,6 @@ Depth JS = 0.039 ≤ 0.10
 The simulator is packaged as a `linux/amd64` Docker image, pinned by
 immutable digest, running fully offline with no network access and
 completing the reference scenario in under 30 milliseconds.
-
----
-
-## What this demonstrates
-
-- **Reading a system deeply enough to replicate its behavior** — not
-  its implementation, but the mechanisms that give it its statistical
-  character.
-- **Distinguishing what the specification actually requires** from
-  what the reference happens to do as an artifact of its design.
-- **Profiling before optimizing** — the biggest wins were not in the
-  matching engine, which is where intuition points first, but in the
-  surrounding infrastructure.
-- **Porting between languages with different idioms** — Python's
-  object graphs and C-extension shims into Rust's ownership model and
-  value semantics.
-- **Working end-to-end**: source, container build, submission
-  descriptor, image registry, and the toolkit's verification pipeline.
 
 ---
 
